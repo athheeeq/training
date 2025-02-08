@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<string.h>
+
+int ispalindrome(char str1[],char str2[]){
+    int left = 0;
+    int right = strlen(str2) - 1;
+    while(left<=right){
+        if(str1[left] != str2[right]){
+            return -1;
+        }
+        left++;
+        right--;
+    }
+    return 1;
+}
+int main() {
+    char s1[] = "mom";
+    char s2[] = "mom";
+    printf("%d",ispalindrome(s1,s2));
+    return 0;
+}
