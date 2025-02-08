@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n = 49;
+    int l=0;
+    int h=n;
+    int mid;
+    while(l<h){
+        mid = (l+h)/2;
+        if((mid*mid) == n){
+            printf("The square root of %d is: %d\n",n,mid);
+            break;
+        }
+        else if((mid*mid)<n){
+            l = mid;
+        }
+        else{
+            h = mid;
+        }
+    }
+
+    return 0;
+}
